@@ -13,6 +13,7 @@ class Library
             collection[0][:return_date] = Date.today.next_month.strftime('%d/%m/%y')
             File.open('./lib/data.yml', 'w') { |f| f.write collection.to_yaml }
             collection[0]
+            raise 'You need to return the book by 'Date.today.next_month.strftime('%d/%m/%y'
         end
         
         def book_checkin
